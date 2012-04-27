@@ -36,8 +36,8 @@ public class DCActivity extends Activity implements OnTouchListener {
     
     private String addr = "dc.azeroth.su";
     private int port = Integer.parseInt(SettingsManager.getInstance().getHubPort());
-    //private String nick = SettingsManager.getInstance().getNick();
-    private String nick ="nix";
+    private String nick = SettingsManager.getInstance().getNick();
+    //private String nick ="nix";
     private String password = SettingsManager.getInstance().getPassword();
     private int id = ConnectionManager.getInstance().createClient2Server(addr, port, nick, password);
     
