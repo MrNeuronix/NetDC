@@ -26,13 +26,19 @@ public final class R {
         public static final int hub_flipper=0x7f06000b;
         public static final int hub_hubName=0x7f06000a;
         public static final int hub_mainLayout=0x7f060009;
+        public static final int hubaddres=0x7f06000d;
         public static final int hubchat_entry=0x7f060007;
+        public static final int hubport=0x7f06000f;
         public static final int msgList=0x7f060005;
+        public static final int nick=0x7f060011;
         public static final int pref=0x7f060001;
         public static final int quick=0x7f060002;
+        public static final int quickconnectlist=0x7f06000c;
         public static final int sent_msg=0x7f060008;
-        public static final int usersRow=0x7f06000c;
+        public static final int usersRow=0x7f060012;
         public static final int widget33=0x7f060004;
+        public static final int widget35=0x7f06000e;
+        public static final int widget37=0x7f060010;
         public static final int widget41=0x7f060000;
     }
     public static final class layout {
@@ -40,7 +46,8 @@ public final class R {
         public static final int hubchat=0x7f030001;
         public static final int main=0x7f030002;
         public static final int message=0x7f030003;
-        public static final int userlist=0x7f030004;
+        public static final int quickconnect=0x7f030004;
+        public static final int userlist=0x7f030005;
     }
     public static final class string {
         public static final int app_name=0x7f050001;

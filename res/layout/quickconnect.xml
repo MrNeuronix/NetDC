@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:id="@+id/quickconnectlist"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<TextView
+	android:id="@+id/widget33"
+	android:layout_width="133px"
+	android:layout_height="23px"
+	android:text="Hub address:" />
+<EditText
+	android:id="@+id/hubaddres"
+	android:layout_width="268px"
+	android:layout_height="wrap_content"
+	android:text="dc.azeroth.su"
+	android:textSize="18sp" />
+<TextView
+	android:id="@+id/widget35"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Hub port:" />
+<EditText
+	android:id="@+id/hubport"
+	android:layout_width="140px"
+	android:layout_height="wrap_content"
+	android:text="411"
+	android:textSize="18sp" />
+<TextView
+	android:id="@+id/widget37"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Your nickname:" />
+<EditText
+	android:id="@+id/nick"
+	android:layout_width="212px"
+	android:layout_height="wrap_content"
+	android:text="netDC-User"
+	android:textSize="18sp" />
+</LinearLayout>

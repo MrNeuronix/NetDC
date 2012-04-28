@@ -39,7 +39,7 @@ public class DCActivity extends Activity implements OnTouchListener {
     private String nick = SettingsManager.getInstance().getNick();
     //private String nick ="nix";
     private String password = SettingsManager.getInstance().getPassword();
-    private int id = ConnectionManager.getInstance().createClient2Server(addr, port, nick, password);
+    private int id;
     
 	ListView		msgList;
 	ListView		usersList;
@@ -57,6 +57,19 @@ public class DCActivity extends Activity implements OnTouchListener {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
         
+        Bundle bundle = this.getIntent().getExtras();
+        
+        if(!bundle.getString("hubname").isEmpty())
+        {
+        	Log.d("NET", "GET QUICK!");
+        	
+        	addr = bundle.getString("hubname");
+        	port = Integer.parseInt(bundle.getString("hubport"));
+        	nick = bundle.getString("nick");
+        	
+        	Log.d("NET", "GET QUICK! NICK: "+bundle.getString("nick"));
+        }
+        
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);  
         
@@ -71,6 +84,8 @@ public class DCActivity extends Activity implements OnTouchListener {
         TextView nameHub = (TextView) this.findViewById(R.id.hub_hubName);
         Button btnSendMsg = (Button) findViewById(R.id.sent_msg);
 
+        id = ConnectionManager.getInstance().createClient2Server(addr, port, nick, password);
+        
         Log.d("NET","Connecting to "+addr+":"+port);
         Log.d("NET","Connect ID: "+id);
 
