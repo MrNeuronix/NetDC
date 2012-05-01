@@ -1,13 +1,14 @@
 package net.dc.core;
 
+
+import net.dc.lib.SettingsManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.StrictMode;
-import android.text.Editable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +19,8 @@ import android.widget.EditText;
 
 
 public class MainActivity extends Activity {
-    
+
+	
     ///////////////////////////////
 	///////////////////////////////
 	
@@ -31,6 +33,12 @@ public class MainActivity extends Activity {
         
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+        
+        Log.d("NET","DATA DIR: "+Environment.getDataDirectory());
+        
+        //FileListCreator.getInstance().addFileListCreatorListener(getFileListCreatorListener());
+        SettingsManager.getInstance().setSharedFolder("/mnt/emmc/");
+   
         
         Button quickconnect = (Button) findViewById(R.id.quick);
         quickconnect.setOnClickListener(new View.OnClickListener() {
@@ -100,4 +108,6 @@ public class MainActivity extends Activity {
         
         });
    }
+    
+   
 }

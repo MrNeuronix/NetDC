@@ -3,8 +3,9 @@ package net.dc.core;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import calyriumdc.*;
-import calyriumdc.event.*;
+import net.dc.lib.*;
+import net.dc.lib.event.*;
+
 
 import android.app.Activity;
 import android.content.Context;
